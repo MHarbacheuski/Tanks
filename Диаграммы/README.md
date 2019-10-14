@@ -15,7 +15,9 @@
 3.2.9 [Уничтожить врагов/блоки](#3.2.9)<br>
 
 ### 1. Диаграмма активности<a name="1"></a>
-[Диграмма активности](https://github.com/Skuuukaaa/Tanks/tree/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Activity)
+[Диаграмма активности](https://github.com/Skuuukaaa/Tanks/tree/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Activity)
+### 2. Диаграмма последовательности<a name="2"></a>
+[Диаграмма последовательности](https://github.com/Skuuukaaa/Tanks/tree/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Sequence)
 ### 3. Диаграмма прецедентов<a name="3"></a>
 Диаграмма прецедентов представляет собой следующую диаграмму:
 ![Use Case Diagram1](https://user-images.githubusercontent.com/46083782/66724024-4b8b4900-ee29-11e9-9991-d81d81c226da.jpg)
