@@ -109,3 +109,4 @@
 ### 4. Диаграмма состояний<a name="4"></a>
 Диграмма состояний
 ### 5. Диаграмма классов<a name="5"></a>
+![Class Diagram1](https://user-images.githubusercontent.com/46083782/67724845-6ba63500-f9f1-11e9-8936-4e2bc9bbeb6d.jpg)
