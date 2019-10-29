@@ -110,3 +110,5 @@
 [Диграмма состояний](https://github.com/Skuuukaaa/Tanks/tree/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/State)
 ### 5. Диаграмма классов<a name="5"></a>
 ![Class Diagram1](https://user-images.githubusercontent.com/46083782/67724845-6ba63500-f9f1-11e9-8936-4e2bc9bbeb6d.jpg)
+### 6. Диаграмма развертывания<a name="6"></a>
+[Диаграмма развертывания](https://github.com/Skuuukaaa/Tanks/tree/master/%D0%94%D0%B8%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/Deployment)
