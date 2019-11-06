@@ -1,6 +1,6 @@
 # Tanks(Battle city)
 
-Язык программирования: С#
+Язык программирования: Java
 
 Среда разработки: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
 
