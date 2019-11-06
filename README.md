@@ -2,7 +2,7 @@
 
 Язык программирования: С#
 
-Среда разработки:[IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+Среда разработки: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
 
 Платформа: Windows
 
