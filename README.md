@@ -2,7 +2,7 @@
 
 Язык программирования: С#
 
-Среда разработки:[ Unity](https://unity.com/),[ Visual Studio](https://visualstudio.microsoft.com/ru/?rr=https%3A%2F%2Fwww.google.com%2F)
+Среда разработки:[IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
 
 Платформа: Windows
 
