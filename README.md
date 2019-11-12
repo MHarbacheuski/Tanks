@@ -2,7 +2,7 @@
 
 Язык программирования: Java
 
-Среда разработки: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows)
+Среда разработки: [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows), awt
 
 Платформа: Windows
 
