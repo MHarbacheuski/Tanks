@@ -1,4 +1,3 @@
-
 package GameMain;
 
 import SpriteClasses.Animation;
@@ -10,6 +9,7 @@ import SpriteClasses.Explosion;
 import SpriteClasses.Tank;
 import SpriteClasses.TankAI;
 import SpriteClasses.TankShield;
+
 import java.awt.Rectangle;
 import java.util.ArrayList;
 
@@ -27,9 +27,6 @@ public class CollisionUtility {
 
     /**
      * Load blocks and explosion animation from the input array list
-     *
-     * @param inblocks input blocks
-     * @param inexplosion
      */
     static public void loadCollisionUtility(ArrayList<Block> inblocks,
                                             ArrayList<Animation> inexplosion) {
@@ -46,9 +43,6 @@ public class CollisionUtility {
 
     /**
      * Helper method for collision between bullets and blocks
-     *
-     * @param bullet
-     * @param block
      */
     public static void CollisionBulletsBlocksHelper(Bullet bullet, Block block) {
         BlockType type = BlockType.getTypeFromInt(block.getType());
@@ -87,9 +81,6 @@ public class CollisionUtility {
 
     /**
      * Check collision between tank and blocks
-     *
-     * @param r3 Rectangle
-     * @return a boolean represents if there is a collision
      */
     public static boolean checkCollisionTankBlocks(Rectangle r3) {
         for (Block block : blocks) {
@@ -106,9 +97,6 @@ public class CollisionUtility {
 
     /**
      * Check collision between bullets and blocks
-     *
-     * @param bullets array list for bullets
-     * @param blocks array list for blocks
      */
     public static void checkCollisionBulletsBlocks(ArrayList<Bullet> bullets,
                                                    ArrayList<Block> blocks) {
@@ -131,9 +119,6 @@ public class CollisionUtility {
 
     /**
      * Check collision between bullets and the player tank
-     *
-     * @param bullets array list for bullets
-     * @param tank
      */
     public static void checkCollisionBulletsTank(ArrayList<Bullet> bullets,
                                                  Tank tank) {
@@ -157,9 +142,6 @@ public class CollisionUtility {
 
     /**
      * Check collision between bullets and enemy tanks
-     *
-     * @param bullets array list for bullets
-     * @param TankAIs array list for Tank AIs
      */
     public static void checkCollisionBulletsTankAI(ArrayList<Bullet> bullets,
                                                    ArrayList<TankAI> TankAIs) {
@@ -193,8 +175,6 @@ public class CollisionUtility {
 
     /**
      * Increment number of the tankAI being destroyed
-     *
-     * @param tankAI a given tankAI
      */
     public static void incrementNum(TankAI tankAI) {
         String type = tankAI.getType();
@@ -218,9 +198,6 @@ public class CollisionUtility {
 
     /**
      * Get the array that stores the number of each enemy tank being destroyed
-     *
-     * @return enemyTankNum the array that stores the number of each enemy tank
-     * being destroyed
      */
     public static int[] getEnemyTankNum() {
         return enemyTankNum;
@@ -228,9 +205,6 @@ public class CollisionUtility {
 
     /**
      * Reset the position of the tank
-     *
-     * @param atank
-     * @param type
      */
     public static void resetTankPosition(Tank atank, int type) {
         atank.x = 10 * 16;
@@ -247,9 +221,6 @@ public class CollisionUtility {
 
     /**
      * Check collision between the player and enemy tanks
-     *
-     * @param TankAIs array list for Tank AIs
-     * @param atank the player tank
      */
     public static void checkCollisionTankTankAI(ArrayList<TankAI> TankAIs,
                                                 Tank atank) {

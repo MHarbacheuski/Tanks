@@ -1,4 +1,3 @@
-
 package GameMain;
 
 import javax.swing.UIManager;
@@ -7,16 +6,8 @@ import javax.swing.UIManager;
  * The main for the entire game
  */
 public class GameMain {
-    /**
-     * @param args the command line arguments
-     * @throws java.lang.Exception
-     */
+
     public static void main(String[] args) throws Exception {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
@@ -33,9 +24,7 @@ public class GameMain {
             java.util.logging.Logger.getLogger(GameView.class.getName()).log(
                     java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 GameView theView = new GameView();

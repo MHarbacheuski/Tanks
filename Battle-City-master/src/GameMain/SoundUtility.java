@@ -1,4 +1,3 @@
-
 package GameMain;
 
 import java.io.File;
@@ -13,7 +12,6 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 
 /**
  * Utility class for sound
- *
  */
 public class SoundUtility {
     private static Clip bulletBrickSE, bulletTankSE;
@@ -102,14 +100,11 @@ public class SoundUtility {
 
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
             Logger.getLogger(SoundUtility.class.getName()).log(Level.SEVERE,
-                                                               null, ex);
+                    null, ex);
         }
         initialized = true;
     }
 
-    /**
-     * Play sound for bullet hits brick
-     */
     public static void BulletHitBrick() {
         if (initialized) {
             bulletBrickSE.loop(1);
@@ -119,9 +114,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for bullet hits tank
-     */
+
     public static void BulletHitTank() {
         if (initialized) {
             bulletTankSE.loop(1);
@@ -132,9 +125,7 @@ public class SoundUtility {
 
     }
 
-    /**
-     * Play sound for firing a bullet
-     */
+
     public static void fireSound() {
         if (initialized) {
             fireSE.loop(1);
@@ -144,9 +135,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for explosion
-     */
+
     public static void explosion1() {
         if (initialized) {
             explosion1SE.loop(1);
@@ -156,9 +145,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for explosion
-     */
+
     public static void explosion2() {
         if (initialized) {
             explosion2SE.loop(1);
@@ -168,9 +155,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for the start stage of the game
-     */
+
     public static void startStage() {
         if (initialized) {
             startStageSE.loop(1);
@@ -180,9 +165,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for the pause
-     */
+
     public static void pause() {
         if (initialized) {
             pauseSE.loop(1);
@@ -193,9 +176,6 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for powerUp pick
-     */
     public static void powerupPick() {
         if (initialized) {
             powerupPickSE.loop(1);
@@ -205,9 +185,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for gameOver
-     */
+
     public static void gameOver() {
         if (initialized) {
             gameoverSE.loop(1);
@@ -217,9 +195,7 @@ public class SoundUtility {
         }
     }
 
-    /**
-     * Play sound for the score screen
-     */
+
     public static void statistics() {
         if (initialized) {
             statisticsSE.loop(1);

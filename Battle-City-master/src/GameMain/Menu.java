@@ -1,4 +1,3 @@
-
 package GameMain;
 
 import java.awt.Color;
@@ -33,8 +32,6 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
 
     /**
      * Constructor for the menu
-     *
-     * @param theView
      */
     public Menu(GameView theView) {
         this.theView = theView;
@@ -48,21 +45,21 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
 
     private void addTimer() {
         Timer timer = new Timer(10, new ActionListener() {
-                            @Override
-                            public void actionPerformed(ActionEvent e) {
-                                yPos += direction;
-                                if (yPos == stopYPos) {
-                                    direction = 0;
-                                } else if (yPos + background.getHeight(null) > getHeight()) {
-                                    yPos = getHeight() - background.getHeight(
-                                            null);
-                                } else if (yPos < 0) {
-                                    yPos = 0;
-                                    direction *= -1;
-                                }
-                                repaint();
-                            }
-                        });
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                yPos += direction;
+                if (yPos == stopYPos) {
+                    direction = 0;
+                } else if (yPos + background.getHeight(null) > getHeight()) {
+                    yPos = getHeight() - background.getHeight(
+                            null);
+                } else if (yPos < 0) {
+                    yPos = 0;
+                    direction *= -1;
+                }
+                repaint();
+            }
+        });
         timer.setRepeats(true);
         timer.setCoalesce(true);
         timer.start();
@@ -79,12 +76,12 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
         super.paintComponent(g);
         Font font = loadFont();
         g.drawImage(background,
-                    Map.BOARD_WIDTH / 2 - background.getWidth(null) / 2 - 10,
-                    yPos, this);
+                Map.BOARD_WIDTH / 2 - background.getWidth(null) / 2 - 10,
+                yPos, this);
         g.setFont(font);
         g.setColor(Color.WHITE);
         g.drawString("1 PLAYER", Map.BOARD_WIDTH / 2 - 56,
-                     yPos + background.getHeight(null) + 50);
+                yPos + background.getHeight(null) + 50);
         if (yPos == stopYPos) {
             drawMenuComponents(g);
         }
@@ -94,14 +91,14 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
         g.drawImage(tree, 10, 50, this);
         g.drawImage(tree, 10, 90, this);
         g.drawImage(tank, Map.BOARD_WIDTH / 2 - 90,
-                    yPos + background.getHeight(null) + 25, this);
+                yPos + background.getHeight(null) + 25, this);
 
         Font font = loadFont();
         g.setFont(font);
         g.setColor(Color.WHITE);
         g.drawString("PRESS ENTER",
-                     Map.BOARD_WIDTH / 2 - 80,
-                     Map.BOARD_HEIGHT * 4 / 5 + 25);
+                Map.BOARD_WIDTH / 2 - 80,
+                Map.BOARD_HEIGHT * 4 / 5 + 25);
     }
 
     @Override
@@ -110,17 +107,15 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
 
     /**
      * Load the game font to the program
-     *
-     * @return font of the game
      */
     public static Font loadFont() {
         Font font = null;
         try {
             font = java.awt.Font.createFont(java.awt.Font.TRUETYPE_FONT,
-                                            new File("prstart.ttf"));
+                    new File("prstart.ttf"));
             font = font.deriveFont(java.awt.Font.PLAIN, 15);
             GraphicsEnvironment ge
-                                = GraphicsEnvironment.getLocalGraphicsEnvironment();
+                    = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(font);
 
         } catch (FontFormatException | IOException ex) {
@@ -172,8 +167,6 @@ public class Menu extends JPanel implements ActionListener, KeyListener {
 
     /**
      * Return if the game is showing the menu
-     *
-     * @return a boolean
      */
     public static boolean getMenuStatus() {
         return menuStatus;

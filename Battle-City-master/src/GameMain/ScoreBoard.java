@@ -1,7 +1,7 @@
-
 package GameMain;
 
 import static GameMain.Menu.loadFont;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+
 
 /**
  * A class for showing the totalScore
@@ -28,6 +29,7 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
     private int totalScore = 0;
     private final int SHIFT = 80;
     private JButton restartButton;
+    private JButton exitButton;
     private final ImageUtility imageInstance = ImageUtility.getInstance();
     private int[] tankScoreList = {0, 0, 0, 0};
     private int[] tankNumList = {0, 0, 0, 0};
@@ -35,8 +37,6 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
     /**
      * Constructor for the ScoreBoard. A restart button is added for the player
      * to restart the game
-     *
-     * @param theView GameView that represents the frame of the game
      */
     public ScoreBoard(GameView theView) {
         this.theView = theView;
@@ -48,14 +48,19 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         restartButton.setText("Restart");
         this.add(restartButton);
         restartButton.setBounds(400, 400,
-                                100, 30);
+                100, 30);
         restartButton.addActionListener(this);
+
+        exitButton = new JButton();
+        exitButton.setText("Exit");
+        this.add(exitButton);
+        exitButton.setBounds(0, 400,
+                100, 30);
+        exitButton.addActionListener(this);
     }
 
     /**
      * Draw the scoreBorad with different types of enemies on the screen.
-     *
-     * @param g Graphics
      */
     @Override
     public void paintComponent(Graphics g) {
@@ -65,9 +70,9 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         Font font = loadFont();
         ArrayList<Image> tankList = new ArrayList<>(
                 Arrays.asList(imageInstance.getTankBasic(),
-                              imageInstance.getTankFast(),
-                              imageInstance.getTankPower(),
-                              imageInstance.getTankArmor()));
+                        imageInstance.getTankFast(),
+                        imageInstance.getTankPower(),
+                        imageInstance.getTankArmor()));
 
         // Display High totalScore
         g.setFont(font);
@@ -75,34 +80,37 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         g.drawString("STAGE   " + String.valueOf(stage), 97 + SHIFT, 60);
 
         g.setColor(Color.RED);
-        g.drawString("1-PLAYER", 37 + SHIFT, 95);
+        g.drawString("1-PLAYER", 57 + SHIFT, 95);
 
         g.setColor(Color.orange);
-        g.drawString(String.valueOf(totalScore), 121 + SHIFT, 130);
+        g.drawString("Total points", 27 + SHIFT, 130);
+
+        g.setColor(Color.orange);
+        g.drawString(String.valueOf(totalScore), 230 + SHIFT, 130);
 
         for (int i = 0; i < 4; i++) {
             g.drawImage(tankList.get(i), 226 + SHIFT, 160 + (i * 45), this);
             g.drawImage(imageInstance.getArrow(), 206 + SHIFT, 168 + (i * 45),
-                        this);
+                    this);
         }
         for (int i = 0; i < 4; i++) {
             g.setColor(Color.WHITE);
             g.drawString(String.valueOf(tankScoreList[i]), 55 + SHIFT,
-                         180 + (i * 45));
+                    180 + (i * 45));
             g.drawString("PTS", 115 + SHIFT, 180 + (i * 45));
         }
 
         for (int i = 0; i < 4; i++) {
             g.setColor(Color.WHITE);
             g.drawString(String.valueOf(tankNumList[i]), 180 + SHIFT,
-                         180 + (i * 45));
+                    180 + (i * 45));
         }
 
         // total underline
         g.drawLine(170, 330, 307, 330);
 
-        g.drawString("TOTAL", 85 + SHIFT, 355);
-        g.drawString(String.valueOf(totalTankNum), 180 + SHIFT, 355);
+        g.drawString("TOTAL killed", 27 + SHIFT, 360);
+        g.drawString(String.valueOf(totalTankNum), 220 + SHIFT, 360);
         g.setFont(font);
         g.setColor(Color.WHITE);
     }
@@ -135,10 +143,17 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         loadMenu();
     }
 
+    public void exit() {
+        System.exit(0);
+    }
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == restartButton) {
             restart();
+        }
+        if (e.getSource() == exitButton) {
+            exit();
         }
     }
 
