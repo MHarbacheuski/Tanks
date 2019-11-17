@@ -10,7 +10,6 @@ import SpriteClasses.Block;
 import SpriteClasses.Brick;
 import SpriteClasses.Bullet;
 import SpriteClasses.Edge;
-import SpriteClasses.PowerUps.PowerUp;
 import SpriteClasses.River;
 import SpriteClasses.Steel;
 import SpriteClasses.Tank;
@@ -40,7 +39,6 @@ public class Board extends JPanel implements ActionListener {
     private ArrayList<TankAI> enemy = new ArrayList<>();
     private ArrayList<Block> blocks = new ArrayList<>();
     private ArrayList<Animation> animations = new ArrayList<>();
-    private ArrayList<PowerUp> powerUps = new ArrayList<>();
     private final ImageUtility imageInstance = ImageUtility.getInstance();
 
     private final int INIT_PLAYER_X = 10 * 25;
@@ -86,7 +84,7 @@ public class Board extends JPanel implements ActionListener {
 
         initBlocks();
         CollisionUtility.loadCollisionUtility(blocks, animations);
-        BoardUtility.loadBoardUtility(enemy, blocks, animations, powerUps, tank);
+        BoardUtility.loadBoardUtility(enemy, blocks, animations, tank);
     }
 
     /**
@@ -180,11 +178,6 @@ public class Board extends JPanel implements ActionListener {
                 g.drawImage(e.getImage(), e.getX(), e.getY(), this);
             }
         }
-        for (PowerUp p : powerUps) {
-            if (p.isVisible()) {
-                g.drawImage(p.getImage(), p.getX(), p.getY(), this);
-            }
-        }
     }
 
     /**
@@ -249,14 +242,14 @@ public class Board extends JPanel implements ActionListener {
      */
     public void updateSprites() {
         spawnTankAI();
-        spawnPowerUp();
+
         updateTank();
         updateTankAI();
         updateBullets();
         updateBlocks();
         updateAnimations();
         updateBlocks();
-        updatePowerUps();
+
     }
 
     @Override
@@ -294,7 +287,7 @@ public class Board extends JPanel implements ActionListener {
                 initBlocks();
                 CollisionUtility.loadCollisionUtility(blocks, animations);
                 BoardUtility.loadBoardUtility(enemy, blocks, animations,
-                        powerUps,
+
                         tank);
             }
         }
@@ -362,13 +355,6 @@ public class Board extends JPanel implements ActionListener {
     }
 
 
-    private void updatePowerUps() {
-        BoardUtility.updatePowerUps();
-    }
-
-    private void spawnPowerUp() {
-        BoardUtility.spawnPowerUp();
-    }
 
 
     private void updateBulletsTank() {
@@ -476,7 +462,7 @@ public class Board extends JPanel implements ActionListener {
 
         animations = new ArrayList<>();
         blocks = new ArrayList<>();
-        powerUps = new ArrayList<>();
+
 
         updateSprites();
         resetTankPosition(tank, 2);
