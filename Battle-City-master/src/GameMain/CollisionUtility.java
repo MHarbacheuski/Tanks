@@ -207,8 +207,8 @@ public class CollisionUtility {
      * Reset the position of the tank
      */
     public static void resetTankPosition(Tank atank, int type) {
-        atank.x = 10 * 16;
-        atank.y = (Map.level0.length - 3) * 16;
+        atank.x = 10 * 25;
+        atank.y = (Map.level0.length - 3) * 25;
         atank.shield = true;
         explosions.add(new TankShield(atank, 2));
         if (type == 1) {
