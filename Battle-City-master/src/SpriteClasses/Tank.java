@@ -1,9 +1,9 @@
-
 package SpriteClasses;
 
 import GameMain.CollisionUtility;
 import GameMain.Map;
 import GameMain.SoundUtility;
+
 import java.awt.Image;
 import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
