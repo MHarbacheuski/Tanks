@@ -47,14 +47,14 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         restartButton = new JButton();
         restartButton.setText("Restart");
         this.add(restartButton);
-        restartButton.setBounds(400, 400,
+        restartButton.setBounds(500, 600,
                 100, 30);
         restartButton.addActionListener(this);
 
         exitButton = new JButton();
         exitButton.setText("Exit");
         this.add(exitButton);
-        exitButton.setBounds(0, 400,
+        exitButton.setBounds(200, 600,
                 100, 30);
         exitButton.addActionListener(this);
     }
@@ -77,40 +77,40 @@ public class ScoreBoard extends JPanel implements ActionListener, KeyListener {
         // Display High totalScore
         g.setFont(font);
         g.setColor(Color.WHITE);
-        g.drawString("STAGE   " + String.valueOf(stage), 97 + SHIFT, 60);
+        g.drawString("STAGE   " + String.valueOf(stage), 230 + SHIFT, 200);
 
         g.setColor(Color.RED);
-        g.drawString("1-PLAYER", 57 + SHIFT, 95);
+        g.drawString("1-PLAYER", 235 + SHIFT, 240);
 
         g.setColor(Color.orange);
-        g.drawString("Total points", 27 + SHIFT, 130);
+        g.drawString("Total points", 180 + SHIFT, 270);
 
         g.setColor(Color.orange);
-        g.drawString(String.valueOf(totalScore), 230 + SHIFT, 130);
+        g.drawString(String.valueOf(totalScore), 385 + SHIFT, 272);
 
         for (int i = 0; i < 4; i++) {
-            g.drawImage(tankList.get(i), 226 + SHIFT, 160 + (i * 45), this);
-            g.drawImage(imageInstance.getArrow(), 206 + SHIFT, 168 + (i * 45),
+            g.drawImage(tankList.get(i), 380 + SHIFT, 290 + (i * 45), this);
+            g.drawImage(imageInstance.getArrow(), 350 + SHIFT, 300 + (i * 45),
                     this);
         }
         for (int i = 0; i < 4; i++) {
             g.setColor(Color.WHITE);
-            g.drawString(String.valueOf(tankScoreList[i]), 55 + SHIFT,
-                    180 + (i * 45));
-            g.drawString("PTS", 115 + SHIFT, 180 + (i * 45));
+            g.drawString(String.valueOf(tankScoreList[i]), 185 + SHIFT,
+                    312 + (i * 45));
+            g.drawString("PTS", 250 + SHIFT, 312 + (i * 45));
         }
 
         for (int i = 0; i < 4; i++) {
             g.setColor(Color.WHITE);
-            g.drawString(String.valueOf(tankNumList[i]), 180 + SHIFT,
-                    180 + (i * 45));
+            g.drawString(String.valueOf(tankNumList[i]), 320 + SHIFT,
+                    312 + (i * 45));
         }
 
         // total underline
-        g.drawLine(170, 330, 307, 330);
+        g.drawLine(270, 480, 500, 480);
 
-        g.drawString("TOTAL killed", 27 + SHIFT, 360);
-        g.drawString(String.valueOf(totalTankNum), 220 + SHIFT, 360);
+        g.drawString("TOTAL killed", 200 + SHIFT, 500);
+        g.drawString(String.valueOf(totalTankNum), 400 + SHIFT, 500);
         g.setFont(font);
         g.setColor(Color.WHITE);
     }
