@@ -180,6 +180,11 @@ public class Board extends JPanel implements ActionListener {
                 g.drawImage(e.getImage(), e.getX(), e.getY(), this);
             }
         }
+        for (PowerUp p : powerUps) {
+            if (p.isVisible()) {
+                g.drawImage(p.getImage(), p.getX(), p.getY(), this);
+            }
+        }
     }
 
     /**
