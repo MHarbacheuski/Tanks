@@ -1,1 +1,0 @@
-java -jar Battle-City-master.jar

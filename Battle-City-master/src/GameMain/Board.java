@@ -44,7 +44,6 @@ public class Board extends JPanel implements ActionListener {
     private final ImageUtility imageInstance = ImageUtility.getInstance();
 
     private final int INIT_PLAYER_X = 10 * 25;
-    private final int INIT_PLAYER_Z = 10 * 25;
     private final int INIT_PLAYER_Y = (Map.level0.length - 3) * 25;
     private final int B_WIDTH = Map.BOARD_WIDTH;
     private final int B_HEIGHT = Map.BOARD_HEIGHT;
@@ -87,7 +86,7 @@ public class Board extends JPanel implements ActionListener {
 
         initBlocks();
         CollisionUtility.loadCollisionUtility(blocks, animations);
-        BoardUtility.loadBoardUtility(enemy, blocks, animations, powerUps, tank);
+        BoardUtility.loadBoardUtility(enemy, blocks, animations,powerUps, tank);
     }
 
     /**
@@ -181,6 +180,11 @@ public class Board extends JPanel implements ActionListener {
                 g.drawImage(e.getImage(), e.getX(), e.getY(), this);
             }
         }
+        for (PowerUp p : powerUps) {
+            if (p.isVisible()) {
+                g.drawImage(p.getImage(), p.getX(), p.getY(), this);
+            }
+        }
     }
 
     /**
@@ -245,14 +249,14 @@ public class Board extends JPanel implements ActionListener {
      */
     public void updateSprites() {
         spawnTankAI();
-
+        spawnPowerUp();
         updateTank();
         updateTankAI();
         updateBullets();
         updateBlocks();
         updateAnimations();
         updateBlocks();
-
+        updatePowerUps();
     }
 
     @Override
@@ -290,7 +294,7 @@ public class Board extends JPanel implements ActionListener {
                 initBlocks();
                 CollisionUtility.loadCollisionUtility(blocks, animations);
                 BoardUtility.loadBoardUtility(enemy, blocks, animations,
-                        powerUps, tank);
+                powerUps, tank);
             }
         }
     }
@@ -356,10 +360,16 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-
     private void updateBulletsTank() {
         BoardUtility.updateBulletsTank();
 
+    }
+    private void updatePowerUps() {
+        BoardUtility.updatePowerUps();
+    }
+
+    private void spawnPowerUp() {
+        BoardUtility.spawnPowerUp();
     }
 
     private void updateBulletsTankAI() {
