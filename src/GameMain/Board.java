@@ -249,14 +249,14 @@ public class Board extends JPanel implements ActionListener {
      */
     public void updateSprites() {
         spawnTankAI();
-
+        spawnPowerUp();
         updateTank();
         updateTankAI();
         updateBullets();
         updateBlocks();
         updateAnimations();
         updateBlocks();
-
+        updatePowerUps();
     }
 
     @Override
@@ -360,12 +360,16 @@ public class Board extends JPanel implements ActionListener {
         }
     }
 
-
-
-
     private void updateBulletsTank() {
         BoardUtility.updateBulletsTank();
 
+    }
+    private void updatePowerUps() {
+        BoardUtility.updatePowerUps();
+    }
+
+    private void spawnPowerUp() {
+        BoardUtility.spawnPowerUp();
     }
 
     private void updateBulletsTankAI() {
