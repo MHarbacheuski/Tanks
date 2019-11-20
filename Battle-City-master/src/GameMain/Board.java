@@ -44,6 +44,7 @@ public class Board extends JPanel implements ActionListener {
     private final ImageUtility imageInstance = ImageUtility.getInstance();
 
     private final int INIT_PLAYER_X = 10 * 25;
+    private final int INIT_PLAYER_Z = 10 * 25;
     private final int INIT_PLAYER_Y = (Map.level0.length - 3) * 25;
     private final int B_WIDTH = Map.BOARD_WIDTH;
     private final int B_HEIGHT = Map.BOARD_HEIGHT;

@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Battle-City-master:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a980502-c93a-4a06-99af-a4d08ac42b39" name="Default Changelist" comment="" />
+    <list default="true" id="abfb31e3-e298-4a36-ae16-299147cc038d" name="Default Changelist" comment="Add river,tree,steel+tanks bot and random spawn bot tanks." />
+    <list id="9d685de4-7ba4-41d4-b822-8e4430718307" name="Revert &quot;Add river,tree,steel+tanks bot and random spawn bot tanks.&quot;" comment="Revert &quot;Add river,tree,steel+tanks bot and random spawn bot tanks.&quot;&#10;&#10;This reverts commit d27f7eff">
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/GameMain/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/GameMain/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/River.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/Steel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/Steel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankAI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankAI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankShield.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankShield.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankSpawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/TankSpawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battle-City-master/src/SpriteClasses/Tree.java" afterDir="false" />
+    </list>
+    <list id="8ba2128d-3913-4ce1-ac67-b2c703144a3f" name="Revert &quot;Update README.md&quot;" comment="Revert &quot;Update README.md&quot;&#10;&#10;This reverts commit 9b05f144" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectId" id="1RhtoG0Fh7X9BysKXX961dxBf9z" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\ceyz\IdeaProjects\Tanks\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1TkKo4fA5Q0oT5A3Fc7hINLUzwp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -33,58 +58,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GameMain">
-    <configuration name="GameMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="GameMain" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GameMain.GameMain" />
       <module name="Battle-City-master" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GameMain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GameMain.GameView" />
-      <module name="Battle-City-master" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GameMain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.sun.tools.javac.launcher.Main" />
-      <module name="Battle-City-master" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.GameMain" />
-        <item itemvalue="Application.GameView" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8a980502-c93a-4a06-99af-a4d08ac42b39" name="Default Changelist" comment="" />
-      <created>1570131328849</created>
+      <changelist id="abfb31e3-e298-4a36-ae16-299147cc038d" name="Default Changelist" comment="" />
+      <created>1573998824717</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570131328849</updated>
+      <updated>1573998824717</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add river,tree,steel+tanks bot and random spawn bot tanks.">
+      <created>1574002269578</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574002269578</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add river,tree,steel+tanks bot and random spawn bot tanks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add river,tree,steel+tanks bot and random spawn bot tanks." />
   </component>
 </project>
